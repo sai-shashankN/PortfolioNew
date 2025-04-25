@@ -28,7 +28,7 @@ function Home2() {
               </i>
               , and enjoy working with tools like
               <i>
-                <b className="purple"> TensorFlow, Unity, React.js, and Firebase</b>
+                <b className="purple"> TensorFlow, Unity, AWS, and Blender</b>
               </i>.
               <br />
               <br />
