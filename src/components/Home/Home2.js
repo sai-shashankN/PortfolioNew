@@ -24,7 +24,7 @@ function Home2() {
               <br />
               I write code in
               <i>
-                <b className="purple"> Python, JavaScript, and C++</b>
+                <b className="purple"> Python, Java, and C#</b>
               </i>
               , and enjoy working with tools like
               <i>
