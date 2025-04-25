@@ -1,23 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import logo from "../Assets/logo.png";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
-import { CgGitFork } from "react-icons/cg";
 import { ImBlog } from "react-icons/im";
 import {
-  AiFillStar,
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
+  AiOutlineBulb,
+  AiFillBulb,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const [darkMode, setDarkMode] = useState(
+    localStorage.getItem("dark-mode") === "true"
+  );
+
+  useEffect(() => {
+    if (darkMode) {
+      document.body.classList.add("dark-mode");
+    } else {
+      document.body.classList.remove("dark-mode");
+    }
+    localStorage.setItem("dark-mode", darkMode);
+  }, [darkMode]);
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -103,15 +114,18 @@ function NavBar() {
               </Nav.Link>
             </Nav.Item>
 
-            <Nav.Item className="fork-btn">
-              <Button
-                href="https://github.com/soumyajit4419/Portfolio"
-                target="_blank"
-                className="fork-btn-inner"
+            <Nav.Item>
+              <Nav.Link
+                onClick={() => setDarkMode(!darkMode)}
+                style={{ cursor: "pointer" }}
               >
-                <CgGitFork style={{ fontSize: "1.2em" }} />{" "}
-                <AiFillStar style={{ fontSize: "1.1em" }} />
-              </Button>
+                {darkMode ? (
+                  <AiFillBulb style={{ marginBottom: "2px" }} />
+                ) : (
+                  <AiOutlineBulb style={{ marginBottom: "2px" }} />
+                )}{" "}
+                {darkMode ? "Light" : "Dark"} Mode
+              </Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
