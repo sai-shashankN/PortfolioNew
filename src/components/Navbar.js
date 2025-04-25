@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -9,26 +9,12 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
-  AiOutlineBulb,
-  AiFillBulb,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
-  const [darkMode, setDarkMode] = useState(
-    localStorage.getItem("dark-mode") === "true"
-  );
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-    localStorage.setItem("dark-mode", darkMode);
-  }, [darkMode]);
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -111,20 +97,6 @@ function NavBar() {
                 style={{ cursor: "pointer" }}
               >
                 <ImBlog style={{ marginBottom: "2px" }} /> Blogs
-              </Nav.Link>
-            </Nav.Item>
-
-            <Nav.Item>
-              <Nav.Link
-                onClick={() => setDarkMode(!darkMode)}
-                style={{ cursor: "pointer" }}
-              >
-                {darkMode ? (
-                  <AiFillBulb style={{ marginBottom: "2px" }} />
-                ) : (
-                  <AiOutlineBulb style={{ marginBottom: "2px" }} />
-                )}{" "}
-                {darkMode ? "Light" : "Dark"} Mode
               </Nav.Link>
             </Nav.Item>
           </Nav>
