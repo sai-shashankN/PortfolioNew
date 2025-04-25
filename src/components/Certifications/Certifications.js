@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import ProjectCard from "../Projects/ProjectCards"; // Same ProjectCard
+import ProjectCard from "../Projects/ProjectCards";
+import courseraGPT from "./courseragpt.pdf"; // ✅ Imported local pdf
 
 function Certifications() {
   return (
@@ -38,7 +39,7 @@ function Certifications() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              pdfLink="https://www.coursera.org/account/accomplishments/certificate/3YTBUTH4S7UB"
+              pdfLink={courseraGPT}
               isBlog={false}
               title="ChatGPT Advanced Data Analysis (Coursera)"
               description="Certification on using OpenAI's ChatGPT for advanced data analysis, including exploration, visualization, and interpretation of large datasets."
