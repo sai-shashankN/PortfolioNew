@@ -2,9 +2,12 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png"; // Use placeholder image
-import chatify from "../../Assets/Projects/chatify.png"; // Another placeholder
-import emotion from "../../Assets/Projects/emotion.png"; // Use for ML projects
+import attendance from "../../Assets/Projects/attendance.png"; // Use placeholder image
+import cancer from "../../Assets/Projects/cancer.png"; // Another placeholder
+import dodge from "../../Assets/Projects/dodge.png"; // Use for ML projects
+import tag from "../../Assets/Projects/tag.png"; // Another placeholder
+import RL from "../../Assets/Projects/reinforcment.png"; // Use for ML projects
+
 
 function Projects() {
   return (
@@ -21,7 +24,7 @@ function Projects() {
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={attendance}
               isBlog={false}
               title="AI Attendance System"
               description="A machine learning-based attendance system that captures faces using dlib, OpenCV, and face_recognition. Achieved 99.38% accuracy using a local facial embeddings database."
