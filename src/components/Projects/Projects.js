@@ -34,7 +34,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={chatify}
+              imgPath={dodge}
               isBlog={false}
               title="Obstacle Dodge Game"
               description="A Unity-based simulation that simulates real-time movement around dynamic obstacles. Optimized mesh performance to reduce processing time in 3D environments."
@@ -44,7 +44,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={tag}
               isBlog={false}
               title="Tag Game (ML Simulation)"
               description="A 3D Unity + ML game where a trained agent plays a tagging game using deep reinforcement learning. Swappable roles between tagger and runner. Objects modeled in Blender."
@@ -54,7 +54,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={leaf}
+              imgPath={RL}
               isBlog={false}
               title="Reinforcement Learning Game AI"
               description="A game agent trained to dodge dynamic obstacles and reach goal states using reinforcement learning. Explores application in self-maneuvering systems like self-driving cars."
@@ -64,7 +64,7 @@ function Projects() {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={emotion}
+              imgPath={cancer}
               isBlog={false}
               title="Cancer Cell Detection System"
               description="A cell classification model trained to detect cancerous vs non-cancerous cells. Achieved 97.87% accuracy — higher than published research (92%). Built using Kaggle datasets."
