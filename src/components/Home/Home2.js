@@ -32,7 +32,7 @@ function Home2() {
               </i>.
               <br />
               <br />
-              Most of what I build falls somewhere between intelligent systems and interactive experiences — I care about both how things work and how they feel.
+              Most of what I build falls somewhere between intelligent systems and interactive experiences. I care about both how things work and how they feel.
             </p>
           </Col>
           <Col md={4} className="myAvtar">
