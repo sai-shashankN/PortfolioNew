@@ -6,7 +6,7 @@ import attendance from "../../Assets/Projects/attendance.png"; // Use placeholde
 import cancer from "../../Assets/Projects/cancer.png"; // Another placeholder
 import dodge from "../../Assets/Projects/dodge.png"; // Use for ML projects
 import tag from "../../Assets/Projects/tag.png"; // Another placeholder
-import RL from "../../Assets/Projects/reinforcment.png"; // Use for ML projects
+import RL from "../../Assets/Projects/reinforcement.png"; // Use for ML projects
 
 
 function Projects() {
